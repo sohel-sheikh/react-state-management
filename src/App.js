@@ -11,7 +11,6 @@ const Counter = () => {
         onClick={() => setCounter(counter + 1)}>
         +
       </button>
-      <code>Counter: {counter}</code>
     </>
   );
 }
@@ -22,6 +21,7 @@ const App = () => {
       <Header title="useState and callbacks"/>
       <section className="container">
         <Counter/>
+        <code>Counter: {`counter ??`}</code>
       </section>
     </>
   );
