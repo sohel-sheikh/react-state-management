@@ -2,16 +2,26 @@ import Header from "./Header";
 import './App.css';
 import {useState} from "react";
 
-const App = () => {
-  const [name, setName] = useState('');
+const Counter = () => {
+  const [counter, setCounter] = useState(0);
 
   return (
     <>
-      <Header title="useState"/>
+      <button
+        onClick={() => setCounter(counter + 1)}>
+        +
+      </button>
+      <code>Counter: {counter}</code>
+    </>
+  );
+}
+
+const App = () => {
+  return (
+    <>
+      <Header title="useState and callbacks"/>
       <section className="container">
-        <input type="text" value={name}
-               onChange={e => setName(e.target.value)}/>
-        <code>Name: {name}</code>
+        <Counter/>
       </section>
     </>
   );
