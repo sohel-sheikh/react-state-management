@@ -1,18 +1,34 @@
 import Header from "./Header";
 import './App.css';
-import {useState} from "react";
+import {useContext} from "react";
+import CounterProvider, {CounterContext} from "./counter-context";
 
-const Counter = () => {
-  const [counter, setCounter] = useState(0);
+const Increment = () => {
+  const {counter, setCounter} = useContext(CounterContext);
 
   return (
-    <>
-      <button
-        onClick={() => setCounter(counter + 1)}>
-        +
-      </button>
-    </>
+    <button
+      onClick={() => setCounter(counter + 1)}>
+      +
+    </button>
   );
+}
+
+const Decrement = () => {
+  const {counter, setCounter} = useContext(CounterContext);
+
+  return (
+    <button
+      onClick={() => setCounter(counter - 1)}>
+      -
+    </button>
+  );
+}
+
+const Counter = () => {
+  const {counter} = useContext(CounterContext);
+
+  return (<code>Counter: {counter}</code>);
 }
 
 const App = () => {
@@ -20,8 +36,11 @@ const App = () => {
     <>
       <Header title="useState and callbacks"/>
       <section className="container">
-        <Counter/>
-        <code>Counter: {`counter ??`}</code>
+        <CounterProvider>
+          <Increment/>
+          <Counter/>
+          <Decrement/>
+        </CounterProvider>
       </section>
     </>
   );
