@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "topics": "yarn src/scripts/topic-navigator.js"
+    "topics": "node src/scripts/topic-navigator.js"
   },
   "eslintConfig": {
     "extends": [
