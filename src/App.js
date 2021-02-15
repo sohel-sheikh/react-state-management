@@ -1,46 +1,13 @@
 import Header from "./Header";
 import './App.css';
-import {useContext} from "react";
-import CounterProvider, {CounterContext} from "./counter-context";
-
-const Increment = () => {
-  const {counter, setCounter} = useContext(CounterContext);
-
-  return (
-    <button
-      onClick={() => setCounter(counter + 1)}>
-      +
-    </button>
-  );
-}
-
-const Decrement = () => {
-  const {counter, setCounter} = useContext(CounterContext);
-
-  return (
-    <button
-      onClick={() => setCounter(counter - 1)}>
-      -
-    </button>
-  );
-}
-
-const Counter = () => {
-  const {counter} = useContext(CounterContext);
-
-  return (<code>Counter: {counter}</code>);
-}
+import cookie from './cookie.png';
 
 const App = () => {
   return (
     <>
-      <Header title="useContext"/>
+      <Header title="bonus tip"/>
       <section className="container">
-        <CounterProvider>
-          <Increment/>
-          <Counter/>
-          <Decrement/>
-        </CounterProvider>
+        <img alt="bonus-cookie-tip" src={cookie} />
       </section>
     </>
   );
