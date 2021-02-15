@@ -18,7 +18,7 @@ const Counter = () => {
 const App = () => {
   return (
     <>
-      <Header title="useState and callbacks"/>
+      <Header title="State lifting"/>
       <section className="container">
         <Counter/>
         <code>Counter: {`counter ??`}</code>
