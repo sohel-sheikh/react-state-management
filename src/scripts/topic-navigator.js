@@ -11,6 +11,7 @@ inquirer.prompt([
       { name: '2. useState and Callbacks', value: 'useState-and-callbacks' },
       { name: '3. state lifting', value: 'state-lifting' },
       { name: '4. useContext', value: 'useContext' },
+      { name: '5. bonus tip', value: 'cookie' },
       { name: '6. exit', value: 'exit' },
     ],
   },
