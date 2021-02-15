@@ -34,7 +34,7 @@ const Counter = () => {
 const App = () => {
   return (
     <>
-      <Header title="useState and callbacks"/>
+      <Header title="useContext"/>
       <section className="container">
         <CounterProvider>
           <Increment/>
